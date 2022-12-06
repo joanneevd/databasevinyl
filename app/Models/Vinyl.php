@@ -2,12 +2,11 @@
   
 namespace App\Models;
   
-use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Model;
+
   
-class posisi extends Model
+class Vinyl extends Model
 {
-    use HasFactory;
+    
   
     /**
      * The attributes that are mass assignable.
@@ -15,10 +14,9 @@ class posisi extends Model
      * @var array
      */
     protected $fillable = [
-        'id_posisi', 'nama_posisi'
+        'id_vinyl', 'title','artist','genre', 'status', 'stok', 'id_penjual', 'id_pembeli'
     ];
-    protected $primaryKey = 'id_posisi';
+    protected $primaryKey = 'id_vinyl';
     protected $keyType = 'bigInteger';
     public $incrementing = false;
-
 }

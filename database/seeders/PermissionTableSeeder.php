@@ -22,18 +22,18 @@ class PermissionTableSeeder extends Seeder
             'role-create',
             'role-edit',
             'role-delete',
-            'hero-list',
-            'hero-create',
-            'hero-edit',
-            'hero-delete',
-            'atribut-list',
-            'atribut-create',
-            'atribut-edit',
-            'atribut-delete',
-            'posisi-list',
-            'posisi-create',
-            'posisi-edit',
-            'posisi-delete'
+            'vinyl-list',
+            'vinyl-create',
+            'vinyl-edit',
+            'vinyl-delete',
+            'penjual-list',
+            'penjual-create',
+            'penjual-edit',
+            'penjual-delete',
+            'pembeli-list',
+            'pembeli-create',
+            'pembeli-edit',
+            'pembeli-delete'
 
         ];
        

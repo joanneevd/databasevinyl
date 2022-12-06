@@ -3,7 +3,7 @@
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
-                <h2>Database Hero</h2>
+                <h2>Database Vinyl</h2>
             </div>
         </div>
     </div>
@@ -14,18 +14,22 @@
     @endif
     <table class="table table-bordered">
         <tr>
-            <th>Nama Hero</th>
-            <th>Atribut</th>
-            <th>Posisi</th>
+            <th>Nama Pembeli</th>
+            <th>Nama Penjual</th>
+            <th>Title</th>
+            <th>Artist</th>
+            <th>Stats</th>
         </tr>
+        
         @foreach ($joins as $join)
         <tr>
-            <td>{{ $join->nama_hero }}</td>
-            <td>{{ $join->nama_atribut }}</td>
-            <td>{{ $join->nama_posisi}} </td>
+            <td>{{ $join->nama_pembeli }}</td>
+            <td>{{ $join->nama_penjual }}</td>
+            <td>{{ $join->title }} </td>
+            <td>{{ $join->artist }} </td>
+            <td>{{ $join->stats }} </td>
         </tr>
         @endforeach
     </table>
     {!! $joins->links() !!}
-    <p class="text-center text-primary"><small>Tutorial by LaravelTuts.com</small></p>
 @endsection

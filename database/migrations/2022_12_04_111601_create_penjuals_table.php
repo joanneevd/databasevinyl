@@ -13,8 +13,12 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::table('atributs', function (Blueprint $table) {
-            $table->softDeletes();
+        Schema::create('penjuals', function (Blueprint $table) {
+            $table->bigInteger('id_penjual')->primary();
+            $table->string('nama_penjual');
+            $table->string('no_telp');
+            $table->string('alamat_penjual');
+            $table->timestamps();
         });
     }
 
@@ -25,8 +29,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::table('atributs', function (Blueprint $table) {
-            $table->dropSoftDeletes();
-        });
+        Schema::dropIfExists('penjuals');
     }
-};
+}; 

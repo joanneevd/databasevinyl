@@ -6,20 +6,21 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'League of Legends Heroes App') }}</title>
+    <title>{{ config('app.name', 'Database Vinyl') }}</title>
 
     @vite(['resources/js/app.js'])
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <link rel="stylesheet" href="app.css">
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    League of Legends Heroes App
+                    Database Vinyl
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -44,12 +45,12 @@
                                 </li>
                             @endif
                         @else
-                            <li><a class="nav-link" href="{{ route('users.index') }}">Manage Users</a></li>
-                            <li><a class="nav-link" href="{{ route('roles.index') }}">Manage Role</a></li>
-                            <li><a class="nav-link" href="{{ route('heros.index') }}">Manage Hero</a></li>
-                            <li><a class="nav-link" href="{{ route('atributs.index') }}">Manage atribut</a></li>
-                            <li><a class="nav-link" href="{{ route('posisis.index') }}">Manage posisi</a></li>
-                            <li><a class="nav-link" href="/totals">Database Hero</a></li>
+                            <li><a class="nav-link" href="{{ route('users.index') }}">Users</a></li>
+                            <li><a class="nav-link" href="{{ route('roles.index') }}">Role</a></li>
+                            <li><a class="nav-link" href="{{ route('vinyls.index') }}">Vinyl</a></li>
+                            <li><a class="nav-link" href="{{ route('penjuals.index') }}">Penjual</a></li>
+                            <li><a class="nav-link" href="{{ route('pembelis.index') }}">Pembeli</a></li>
+                            <li><a class="nav-link" href="/totals">Database Vinyl</a></li>
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }}

@@ -13,9 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('atributs', function (Blueprint $table) {
-            $table->bigInteger('id_atribut')->primary();
-            $table->string('nama_atribut');
+        Schema::create('pembelis', function (Blueprint $table) {
+            $table->bigInteger('id_pembeli')->primary();
+            $table->string('nama_pembeli');
+            $table->string('no_telp');
+            $table->string('alamat_pembeli');
             $table->timestamps();
         });
     }
@@ -27,6 +29,7 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('atributs');
+        Schema::dropIfExists('pembelis');
     }
 };
+

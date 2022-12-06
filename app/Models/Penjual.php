@@ -5,8 +5,8 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
-  
-class Hero extends Model
+
+class Penjual extends Model
 {
     use HasFactory,SoftDeletes;
   
@@ -16,9 +16,9 @@ class Hero extends Model
      * @var array
      */
     protected $fillable = [
-        'id_hero', 'nama_hero','id_atribut','id_posisi'
+        'id_penjual', 'nama_penjual','no_telp','alamat_penjual'
     ];
-    protected $primaryKey = 'id_hero';
+    protected $primaryKey = 'id_penjual';
     protected $keyType = 'bigInteger';
     public $incrementing = false;
 }

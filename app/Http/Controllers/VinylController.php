@@ -66,10 +66,9 @@ class VinylController extends Controller
             'stats' => 'required',
             'stok' => 'required',
             'id_penjual' => 'required',
-            'id_pembeli' => 'required',
         ]);
     
-        DB::insert('INSERT INTO vinyljos(id_vinyl, title, artist, genre, stats, stok, id_penjual, id_pembeli) VALUES (:id_vinyl, :title, :artist, :genre, :stats, :stok, :id_penjual, :id_pembeli)',
+        DB::insert('INSERT INTO vinyljos(id_vinyl, title, artist, genre, stats, stok, id_penjual) VALUES (:id_vinyl, :title, :artist, :genre, :stats, :stok, :id_penjual)',
         [
             'id_vinyl' => $request->id_vinyl,
             'title' => $request->title,
@@ -78,8 +77,6 @@ class VinylController extends Controller
             'stats' => $request->stats,
             'stok' => $request->stok,
             'id_penjual' => $request->id_penjual,
-            'id_pembeli' => $request->id_pembeli,
-        
         ]
         );
     
@@ -118,8 +115,7 @@ class VinylController extends Controller
             'genre' => 'required',
             'stats' => 'required',
             'stok' => 'required',
-            'id_penjual' => 'required',
-            'id_pembeli' => 'required'
+            'id_penjual' => 'required'
         ]);
         $data = [
             'id_vinyl' => $request->id_vinyl,
@@ -128,8 +124,7 @@ class VinylController extends Controller
             'genre' => $request->genre,
             'stats' => $request->stats,
             'stok' => $request->stok,
-            'id_penjual' => $request->id_penjual,
-            'id_pembeli' => $request->id_pembeli,
+            'id_penjual' => $request->id_penjual
         ];
         // $vinyl->update($request->all());
         DB::table('vinyljos')->where('id_vinyl', $request->id_vinyl)->update($data);

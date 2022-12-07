@@ -63,15 +63,16 @@ class PembeliController extends Controller
             'nama_pembeli' => 'required',
             'no_telp' => 'required',
             'alamat_pembeli' => 'required',
+            'id_vinyl' => 'required'
         ]);
     
-        DB::insert('INSERT INTO pembelis(id_pembeli, nama_pembeli, no_telp, alamat_pembeli) VALUES (:id_pembeli, :nama_pembeli, :no_telp, :alamat_pembeli)',
+        DB::insert('INSERT INTO pembelis(id_pembeli, nama_pembeli, no_telp, alamat_pembeli, id_vinyl) VALUES (:id_pembeli, :nama_pembeli, :no_telp, :alamat_pembeli, :id_vinyl)',
         [
             'id_pembeli' => $request->id_pembeli,
             'nama_pembeli' => $request->nama_pembeli,
             'no_telp' => $request->no_telp,
             'alamat_pembeli' => $request->alamat_pembeli,
-        
+            'id_vinyl' => $request->id_vinyl
         ]
         );
     
@@ -107,13 +108,15 @@ class PembeliController extends Controller
             'id_pembeli' => 'required',
             'nama_pembeli' => 'required',
             'no_telp' => 'required',
-            'alamat_pembeli' => 'required'
+            'alamat_pembeli' => 'required',
+            'id_vinyl' => 'required'
         ]);
         $data = [
             'id_pembeli' => $request->id_pembeli,
             'nama_pembeli' => $request->nama_pembeli,
             'no_telp' => $request->no_telp,
             'alamat_pembeli' => $request->alamat_pembeli,
+            'id_vinyl' => $request->id_vinyl
         ];
         // $pembeli->update($request->all());
         DB::table('pembelis')->where('id_pembeli', $request->id_pembeli)->update($data);

@@ -21,7 +21,6 @@
             <th>Stats</th>
             <th>Stok</th>
             <th>ID Penjual</th>
-            <th>ID Pembeli</th>
             <th width="280px">Action</th>
         </tr>
         @foreach ($vinyls as $vinyl)
@@ -33,7 +32,6 @@
             <td>{{ $vinyl->stats }}</td>
             <td>{{ $vinyl->stok }}</td>
             <td>{{ $vinyl->id_penjual }}</td>
-            <td>{{ $vinyl->id_pembeli }}</td>
             <td>
                 <div class="d-flex gap-3">
                     <form class="m-0" id="restoreForm" action="/vinyls/trash/restore/{{$vinyl->id_vinyl}}" method="POST">

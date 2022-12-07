@@ -17,7 +17,7 @@ class JoinController extends Controller
         //         ->with('i', (request()->input('page', 1) - 1) * 6);
 
                 $joins = DB::table('vinyljos')
-                ->join('pembelis', 'pembelis.id_pembeli', '=', 'vinyljos.id_pembeli')
+                ->join('pembelis', 'pembelis.id_vinyl', '=', 'vinyljos.id_vinyl')
                 ->join('penjuals', 'penjuals.id_penjual', '=', 'vinyljos.id_penjual')
                 ->select('pembelis.nama_pembeli as nama_pembeli', 'penjuals.nama_penjual as nama_penjual', 'vinyljos.title as title', 'vinyljos.artist as artist', 'vinyljos.stats as stats')
                 ->paginate(6);

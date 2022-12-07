@@ -47,6 +47,12 @@
                     <input type="text" name="alamat_pembeli" value="{{ $pembeli->alamat_pembeli }}" class="form-control" placeholder="alamat_pembeli">
                 </div>
             </div>
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <div class="form-group">
+                    <strong>ID vinyl:</strong>
+                    <input type="number" name="id_vinyl" value="{{ $pembeli->id_vinyl }}" class="form-control" placeholder="id vinyl">
+                </div>
+            </div>
             <div class="col-xs-12 col-sm-12 col-md-12 text-center">
               <button type="submit" class="btn btn-primary">Submit</button>
             </div>

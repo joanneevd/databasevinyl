@@ -14,7 +14,7 @@ class Vinyl extends Model
      * @var array
      */
     protected $fillable = [
-        'id_vinyl', 'title','artist','genre', 'status', 'stok', 'id_penjual', 'id_pembeli'
+        'id_vinyl', 'title','artist','genre', 'status', 'stok', 'id_penjual'
     ];
     protected $primaryKey = 'id_vinyl';
     protected $keyType = 'bigInteger';

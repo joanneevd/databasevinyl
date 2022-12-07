@@ -21,7 +21,6 @@ return new class extends Migration
             $table->string('stats');
             $table->string('stok');
             $table->bigInteger('id_penjual');
-            $table->bigInteger('id_pembeli');
             $table->timestamps();
         });
     }

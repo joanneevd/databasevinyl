@@ -65,12 +65,6 @@
                     <input type="number" name="id_penjual" value="{{ $vinyl->id_penjual }}" class="form-control" placeholder="ID Penjual">
                 </div>
             </div>
-            <div class="col-xs-12 col-sm-12 col-md-12">
-                <div class="form-group">
-                    <strong>ID Pembeli:</strong>
-                    <input type="number" name="id_pembeli" value="{{ $vinyl->id_pembeli }}" class="form-control" placeholder="ID Pembeli">
-                </div>
-            </div>
             <div class="col-xs-12 col-sm-12 col-md-12 text-center">
               <button type="submit" class="btn btn-primary">Submit</button>
             </div>

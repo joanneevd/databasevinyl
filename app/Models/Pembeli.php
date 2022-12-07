@@ -16,7 +16,7 @@ class Pembeli extends Model
      * @var array
      */
     protected $fillable = [
-        'id_pembeli', 'nama_pembeli','no_telp','alamat_pembeli'
+        'id_pembeli', 'nama_pembeli','no_telp','alamat_pembeli', 'id_vinyl'
     ];
     protected $primaryKey = 'id_pembeli';
     protected $keyType = 'bigInteger';

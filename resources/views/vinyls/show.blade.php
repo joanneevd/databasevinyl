@@ -53,12 +53,6 @@
                 {{ $vinyl->id_penjual }}
             </div>
         </div>
-        <div class="col-xs-12 col-sm-12 col-md-12">
-            <div class="form-group">
-                <strong>ID Pembeli</strong>
-                {{ $vinyl->id_pembeli }}
-            </div>
-        </div>
     </div>
 @endsection
 

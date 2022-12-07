@@ -18,6 +18,7 @@
             <th>Nama Pembeli</th>
             <th>No Telp</th>
             <th>Alamat pembeli</th>
+            <th>ID vinyl</th>
             <th width="280px">Action</th>
         </tr>
         @foreach ($pembelis as $pembeli)
@@ -26,6 +27,7 @@
             <td>{{ $pembeli->nama_pembeli }}</td>
             <td>{{ $pembeli->no_telp }}</td>
             <td>{{ $pembeli->alamat_pembeli }}</td>
+            <td>{{ $pembeli->id_vinyl }}</td>
             <td>
                 <div class="d-flex gap-3">
                     <form class="m-0" id="restoreForm" action="/pembelis/trash/restore/{{$pembeli->id_pembeli}}" method="POST">
